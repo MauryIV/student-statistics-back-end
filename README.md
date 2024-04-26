@@ -1,45 +1,70 @@
-Module 18 Mini-Project: Student Statistics Back-End
-In this activity, you will start with an existing codebase for a mostly complete application.
-You will be adding aggregate methods to the Student controller to show a student's overall grade and the number of students.
+<a id="title"></a>
+# Student Stats (back-end) 
 
-Instructions
-The completed application should meet the following criteria:
+<a id="description"></a>
+## Description
+This application is a great reference for a back-end layout using MongoDB's Mongoose. This is good for working with something new, and having a different layout than before. Can reference this for creating your own back-end DB.
 
-As a user, I want to be able to view all the students and get a total of the number of students enrolled.
+## Table of Contents
+- [Title](#title)
+- [Description](#description)
+- [Badges](#badges)
+- [Visuals](#visuals)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tests](#tests)
+- [Questions](#questions)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Authors and Acknowledgment](#acknowledgment)
+- [License](#license)
+- [Project Status](#status)
 
-As a user, I want to be able to view a specific student's overall grade in the class using MongoDB operators and their score on each assignment.
+<a id="badges"></a>
+## Badges
+![Maury Hughes IV](https://img.shields.io/badge/Maury%20Hughes%20IV-5A2BE2)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-As a user, I want to be able to execute create, read, update, and delete operations on courses, students, and assignments.
+<a id="installation"></a>
+## Installation
+This would require the user to instal MongoDB, as well as running npm install to get all the dependencies listed in package.json.
 
-Specifications
-The completed application should meet the following specifications:
+<a id="usage"></a>
+## Usage
+This would be best used as a reference for creating your own backend application. Can refer to the layout format or the way Mongoose is used.
 
-The application must make use of a MongoDB database, the Mongoose ODM, and Express.js.
+<a id="Visuals"></a>
+## Visuals
+NA
 
-The database must be seeded with sample data.
+<a id="tests"></a>
+## Tests
+I tested the routes using Insomnia. User would likly want to use something like Insomnia to test the routes after the seeds are run to make sure you are getting expected results.
 
-The Student controller should have a headCount aggregate function to get the total number of students by making use of MongoDB aggregate operators.
+<a id="questions"></a>
+## Questions
+If you have any questions about the contents. Please feel free to reach out!
+Here is my [Github](https://github.com/MauryIV) as well as my email <mauryhughesiv@gmail.com>.
 
-The Student controller should have a grade aggregate function that returns a single student and also the student's overall grade using MongoDB aggregate operators.
+<a id="roadmap"></a>
+## Roadmap
+NA
 
-The project will require research of MongoDB operators such as $addToSet, $unwind, $group, $match, and $avg.
+<a id="contributing"></a>
+## Contributing
+If there are any suggestions for inproving the layout, please do reach out. I am always open for improving.
 
-Student lookup will require use of the ObjectId() method.
+<a id="acknowledgment"></a>
+## Authors and Acknowledgment
+Most the code was written by the DU coding bootcamp. As seen in initial commit. Pluggin in the necessary aspects to make the program work, was from myself and fellow students brainstorming together.
 
-The endpoints api/students/<student id> and api/students/ should be tested using Insomnia to ensure that the aggregate functions return the student's overall grade and headcount respectively.
+<a id="license"></a>
+## License
+MIT License © 2024 Maury Hughes IV
+Please refer to this link, [License: MIT](https://opensource.org/licenses/MIT) for more information.
 
-💡 Hints
+<a id="status"></a>
+## Project Status
+Complete.
 
-Be sure to run npm run seed to seed your database before testing with Insomnia.
-
-Run npm run dev to have the server automatically restart whenever changes are saved.
-
-How can we use the $avg MongoDB operator to calculate the overall grade for a student?
-
-How can we use the ObjectId Mongoose Type method to ensure we are able to query a student based on the value in their _id field?
-
-🏆 Bonus
-
-What is the difference between Mongoose and MongoDB? What are the advantages and disadvantages of both?
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+[back to top](#title)

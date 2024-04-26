@@ -2,28 +2,29 @@
 const { ObjectId } = require('mongoose').Types;
 const { Student, Course } = require('../models');
 
-// TODO: Create an aggregate function to get the number of students overall
 const headCount = async () => {
   // Your code here
-  const numberOfStudents = await Student.aggregate();
-  return numberOfStudents;
+  return await Student.aggregate([
+    {
+      $count: 'total students'
+    }
+  ]);
 }
 
 // Execute the aggregate method on the Student model and calculate the overall grade by using the $avg operator
-const grade = async (studentId) =>
-  Student.aggregate([
-    // TODO: Ensure we include only the student who can match the given ObjectId using the $match operator
+const grade = async (studentId) => {
+  return Student.aggregate([
+    { $match: { _id: new ObjectId(studentId) } },
+    { $unwind: '$assignments' },
     {
-      // Your code here
-    },
-    {
-      $unwind: '$assignments',
-    },
-    // TODO: Group information for the student with the given ObjectId alongside an overall grade calculated using the $avg operator
-    {
-      // Your code here
+      $group: {
+        // Group by null (no additional grouping by id)
+        _id: '$_id',
+        grade: { $avg: '$assignments.score' },
+      },
     },
   ]);
+};
 
 module.exports = {
   // Get all students
